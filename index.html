@@ -49,12 +49,17 @@
                 </div>
 
                 <div class="image-container">
+                    <img id="selected-image" src="">
                 </div>
             </div>
 
             <div class="action-buttons-container">
                 <button id="reset-button" class="action-button" type="button">RESET FILTERS</button>
-                <button id="choose-button" class="action-button" type="button">CHOOSE IMAGE</button>
+                <button onclick="chooseImage()" id="choose-button" class="action-button" type="button">
+                   CHOOSE IMAGE
+                   <input type="file" id="file-input" accept="image/*" style="display: none;">
+                </button>
+                
                 <button id="save-button" class="action-button" type="button">SAVE IMAGE</button>
 
 
