@@ -47,6 +47,13 @@
     cursor: pointer;
 }
 
+#selected-filter-button {
+    flex: 45%;
+    height: 3rem;
+    background-color: #5372f0;
+    color: white;
+    border: none;
+}
 .filter-button:focus {
     background-color: #5372f0;
     color: white;

@@ -1,3 +1,7 @@
+var filters = ["brightness-button", "saturation-button", "inversion-button", "grayscale-button"]
+var filterHeadings = ["Brightness", "Saturation", "Inversion", "Grayscale"]
+var selectedElement = 0;
+
 function chooseImage() {
     const input = document.getElementById("file-input");
     input.addEventListener("change", function() {
@@ -18,3 +22,20 @@ function chooseImage() {
     input.click();
 }
 
+function chooseFilter(itemNo) {
+    if (itemNo === selectedElement) {
+        return
+    }
+
+    newItem = document.getElementById(filters[itemNo])
+    oldItem = document.getElementById("selected-filter-button")
+
+    oldItem.id = filters[selectedElement]
+    newItem.id = "selected-filter-button";
+
+    selectedElement = itemNo;
+
+    // Setting the name for the slider to also display
+    sliderHeading = document.getElementById("filter-name")
+    sliderHeading.innerHTML = filterHeadings[selectedElement]
+}

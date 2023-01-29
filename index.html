@@ -18,17 +18,16 @@
                 <div class="filter-container">
                     <p class="heading-text">Filters</p>
                     <div class="filter-buttons-container">
-                        <button class="filter-button" type="button">Brightness</button>
-                        <button class="filter-button" type="button">Saturation</button>
-                        <button class="filter-button" type="button">Inversion</button>
-                        <button class="filter-button" type="button">Grayscale</button>
+                        <button onclick="chooseFilter(0)" id="selected-filter-button" class="filter-button" type="button">Brightness</button>
+                        <button onclick="chooseFilter(1)" id="saturation-button" class="filter-button" type="button">Saturation</button>
+                        <button onclick="chooseFilter(2)" id="inversion-button" class="filter-button" type="button">Inversion</button>
+                        <button onclick="chooseFilter(3)" id="grayscale-button" class="filter-button" type="button">Grayscale</button>
 
                     </div>
 
                     <div class="filter-slider">
-                        <p
-                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; font-weight: bold; color:gray;">
-                            Brightness</p>
+                        <p id="filter-name"
+                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; font-weight: bold; color:gray;">Brightness</p>
                         <input type="range" min="1" max="100" class="slider" id="rangeSlider">
                     </div>
 
@@ -59,7 +58,7 @@
                    CHOOSE IMAGE
                    <input type="file" id="file-input" accept="image/*" style="display: none;">
                 </button>
-                
+
                 <button id="save-button" class="action-button" type="button">SAVE IMAGE</button>
 
 
