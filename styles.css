@@ -6,7 +6,6 @@
 .box-container {
     position: absolute;
     width: 50%;
-    height: 50%;
     left: 25%;
     top: 25%;
 }
@@ -34,12 +33,18 @@
 
 .filter-button {
     flex: 45%;
-    height: 2rem;
+    height: 3rem;
     color: gray;
     background-color: white;
     border: solid rgb(216,216,216) 2px;
     border-radius: 5px;
 }
+
+.filter-button:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
 .filter-button:focus {
     background-color: #5372f0;
     color: white;
@@ -47,6 +52,7 @@
 }
 
 .slider {
+    accent-color: #5372f0;
     width: 100%;
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -54,13 +60,74 @@
 }
 
 .slider:hover {
+    cursor: pointer;
     opacity: 1; /* Fully shown on mouse-over */
 }
-  
+
+.rotate-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rotate-buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.rotate-button {
+    height: 20%;
+    flex: 25%;
+    background-color: white;
+    padding: 1rem;
+    border: solid rgb(216,216,216) 2px;
+    border-radius: 5px;
+}
+.rotate-button:hover {
+    background-color: aliceblue;
+}
+.rotate-button:active {
+    background-color: #5372f0;
+}
+
+#rotate-custom {
+    flex: 50%;
+}
+
+.rotate-icon {
+    width: 1rem;
+}
 
 .image-container {
     flex: 1.5;
-    background-color: blue;
+    background-color: antiquewhite;
+}
+
+.action-buttons-container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.action-button {
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#reset-button {
+    background-color: white;
+    color: gray;
+    border: solid gray 2px;
+}
+#choose-button {
+    background-color: gray;
+    color: white;
+    margin-right: 1rem;
+    margin-left: auto;
+
+}
+#save-button {
+    background-color: #5372f0;
+    color: white;
 }
 
 

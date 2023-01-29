@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <div class="main-container">
-            <div class="box-container">
-                <div class="flex-container">
-                    <div class="filter-container">
-                        <p class="heading-text">Filters</p>
-                        <div class="filter-buttons-container">
-                            <button class="filter-button" type="button">Brightness</button>
-                            <button class="filter-button" type="button">Saturation</button>
-                            <button class="filter-button" type="button">Inversion</button>
-                            <button class="filter-button" type="button">Grayscale</button>
 
-                        </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+</head>
 
-                        <div class="filter-slider">
-                            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; color:gray;">Brightness</p>
-                            <input type="range" min="1" max="100" class="slider" id="rangeSlider" >
-                        </div>
+<body>
+    <div class="main-container">
+        <div class="box-container">
+            <div class="flex-container">
+                <div class="filter-container">
+                    <p class="heading-text">Filters</p>
+                    <div class="filter-buttons-container">
+                        <button class="filter-button" type="button">Brightness</button>
+                        <button class="filter-button" type="button">Saturation</button>
+                        <button class="filter-button" type="button">Inversion</button>
+                        <button class="filter-button" type="button">Grayscale</button>
 
-                        <div class="rotate-container">
-                            <p class="heading-text">Rotate & Flip</p>
-                        </div>
                     </div>
 
-                    <div class="image-container">
-                        <p>b</p>
+                    <div class="filter-slider">
+                        <p
+                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; font-weight: bold; color:gray;">
+                            Brightness</p>
+                        <input type="range" min="1" max="100" class="slider" id="rangeSlider">
+                    </div>
+
+                    <div class="rotate-container">
+                        <p class="heading-text">Rotate & Flip</p>
+                        <div class="rotate-buttons-container">
+                            <button class="rotate-button" type="button">
+                                <img class="rotate-icon" src="./assets/images/rotate-left.png" />
+                            </button>
+
+                            <button class="rotate-button" type="button">
+                                <img class="rotate-icon" src="./assets/images/rotate-right.png" />
+                            </button>
+                            <button id="rotate-custom" class="rotate-button">Custom</button>
+
+                        </div>
                     </div>
                 </div>
+
+                <div class="image-container">
+                </div>
+            </div>
+
+            <div class="action-buttons-container">
+                <button id="reset-button" class="action-button" type="button">RESET FILTERS</button>
+                <button id="choose-button" class="action-button" type="button">CHOOSE IMAGE</button>
+                <button id="save-button" class="action-button" type="button">SAVE IMAGE</button>
+
+
             </div>
         </div>
-        
-        <script src="" async defer></script>
-    </body>
+
+
+    </div>
+
+    <script src="./script.js" async defer></script>
+</body>
+
 </html>
