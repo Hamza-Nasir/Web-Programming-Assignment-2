@@ -7,10 +7,38 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
+        <div class="main-container">
+            <div class="box-container">
+                <div class="flex-container">
+                    <div class="filter-container">
+                        <p class="heading-text">Filters</p>
+                        <div class="filter-buttons-container">
+                            <button class="filter-button" type="button">Brightness</button>
+                            <button class="filter-button" type="button">Saturation</button>
+                            <button class="filter-button" type="button">Inversion</button>
+                            <button class="filter-button" type="button">Grayscale</button>
 
+                        </div>
+
+                        <div class="filter-slider">
+                            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; color:gray;">Brightness</p>
+                            <input type="range" min="1" max="100" class="slider" id="rangeSlider" >
+                        </div>
+
+                        <div class="rotate-container">
+                            <p class="heading-text">Rotate & Flip</p>
+                        </div>
+                    </div>
+
+                    <div class="image-container">
+                        <p>b</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <script src="" async defer></script>
     </body>
