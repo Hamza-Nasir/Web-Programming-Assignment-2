@@ -6,7 +6,7 @@
 .box-container {
     position: absolute;
     width: 50%;
-    height: max-content ;
+    height: 50% ;
     left: 25%;
     top: 25%;
 }

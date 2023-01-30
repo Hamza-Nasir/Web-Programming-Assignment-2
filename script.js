@@ -4,24 +4,33 @@ var filterValues = [100, 100, 0, 0]
 var selectedElement = 0;
 var imageFlippedValue = 0;
 
+function mod(n, m) {
+    return ((n % m) + m) % m;
+}
+
 function rotateLeft() {
     imageFlippedValue -= 90
-    imageFlippedValue %= 360
+    imageFlippedValue = mod(imageFlippedValue, 360);
 
     let img = document.getElementById("selected-image");
+    let container = document.getElementById("image-container");
 
-    // img.style.transform = `rotate(${imageFlippedValue}deg)`;
-    document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
+    img.style.transform = `rotate(${imageFlippedValue}deg)`;
+
+    // document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
+    // img.style.maxHeight = container.offsetWidth + 'px';
+
+
 }
 
 function rotateRight() {
     imageFlippedValue += 90
-    imageFlippedValue %= 360
+    imageFlippedValue = mod(imageFlippedValue, 360);
 
     let img = document.getElementById("selected-image");
 
-    // img.style.transform = `rotate(${imageFlippedValue}deg)`;
-    document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
+    img.style.transform = `rotate(${imageFlippedValue}deg)`;
+    // document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
 }
 
 function resetFilters() {
@@ -69,7 +78,11 @@ function chooseImage() {
 
         filterBox.style.display = "block";
         imageBox.style.display = "block";
+        
         filterValues = [100, 100, 0, 0]
+        imageFlippedValue = 0
+        document.getElementById("selected-image").style.transform = `rotate(0deg)`;
+        resetFilters();
     });
     input.click();
 }
