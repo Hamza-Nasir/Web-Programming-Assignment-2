@@ -3,6 +3,15 @@ var filterHeadings = ["Brightness", "Saturation", "Inversion", "Grayscale"]
 var filterValues = [100, 100, 0, 0]
 var selectedElement = 0;
 
+function resetFilters() {
+    filterValues = [100, 100, 0, 0]
+
+    document.getElementById("slider-value").innerHTML = filterValues[selectedElement];
+    document.getElementById("rangeSlider").value = filterValues[selectedElement];
+
+    document.getElementById("selected-image").style.filter = `brightness(${filterValues[0]}%) saturate(${filterValues[1]}%) invert(${filterValues[2]}%) grayscale(${filterValues[3]}%)`;
+}
+
 function setFilterValue() {
     var slider = document.getElementById('rangeSlider');
     slider.addEventListener('input', sliderChange);
@@ -39,6 +48,7 @@ function chooseImage() {
 
         filterBox.style.display = "block";
         imageBox.style.display = "block";
+        filterValues = [100, 100, 0, 0]
     });
     input.click();
 }
