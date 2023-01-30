@@ -2,6 +2,27 @@ var filters = ["brightness-button", "saturation-button", "inversion-button", "gr
 var filterHeadings = ["Brightness", "Saturation", "Inversion", "Grayscale"]
 var filterValues = [100, 100, 0, 0]
 var selectedElement = 0;
+var imageFlippedValue = 0;
+
+function rotateLeft() {
+    imageFlippedValue -= 90
+    imageFlippedValue %= 360
+
+    let img = document.getElementById("selected-image");
+
+    // img.style.transform = `rotate(${imageFlippedValue}deg)`;
+    document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
+}
+
+function rotateRight() {
+    imageFlippedValue += 90
+    imageFlippedValue %= 360
+
+    let img = document.getElementById("selected-image");
+
+    // img.style.transform = `rotate(${imageFlippedValue}deg)`;
+    document.getElementById("image-container").style.transform = `rotate(${imageFlippedValue}deg)`;
+}
 
 function resetFilters() {
     filterValues = [100, 100, 0, 0]

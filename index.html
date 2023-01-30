@@ -37,11 +37,11 @@
                     <div class="rotate-container">
                         <p class="heading-text">Rotate & Flip</p>
                         <div class="rotate-buttons-container">
-                            <button class="rotate-button" type="button">
+                            <button onclick="rotateLeft()" class="rotate-button" type="button">
                                 <img class="rotate-icon" src="./assets/images/rotate-left.png" />
                             </button>
 
-                            <button class="rotate-button" type="button">
+                            <button onclick="rotateRight()" class="rotate-button" type="button">
                                 <img class="rotate-icon" src="./assets/images/rotate-right.png" />
                             </button>
                             <button id="rotate-custom" class="rotate-button">Custom</button>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="image-container">
+                <div id="image-container" class="image-container">
                     <img id="selected-image" src="">
                 </div>
             </div>
