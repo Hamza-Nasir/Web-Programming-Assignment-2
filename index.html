@@ -26,9 +26,12 @@
                     </div>
 
                     <div class="filter-slider">
-                        <p id="filter-name"
-                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:small; font-weight: bold; color:gray;">Brightness</p>
-                        <input type="range" min="1" max="100" class="slider" id="rangeSlider">
+                        <div style="display: flex;">
+                            <p id="filter-name" class="slider-text">Brightness</p>
+                            <p id="slider-value" class="slider-text" style="margin-left: auto;">100</p><p class="slider-text">%</p>
+                        </div>
+                        
+                        <input oninput="setFilterValue()" type="range" min="0" max="200" class="slider" id="rangeSlider">
                     </div>
 
                     <div class="rotate-container">

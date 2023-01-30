@@ -73,6 +73,13 @@
     opacity: 1; /* Fully shown on mouse-over */
 }
 
+.slider-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size:small; 
+    font-weight: bold; 
+    color:gray;
+}
+
 .rotate-container {
     margin-top: 1rem;
     margin-bottom: 2rem;
